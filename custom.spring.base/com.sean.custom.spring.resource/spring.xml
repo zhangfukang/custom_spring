@@ -1,0 +1,8 @@
+<beans>
+	<bean id="customerService"
+		class="com.sean.custom.spring.base.CustomerServiceImpl" />
+	<bean id="orderService"
+		class="com.sean.custom.spring.base.OrderServiceImpl">
+		<ref value="customerService" />
+	</bean>
+</beans>
