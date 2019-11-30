@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.junit.Test;
 
+import com.sean.custom.spring.annotation.Scan;
 import com.sean.custom.spring.base.BeanFactory;
 import com.sean.custom.spring.base.OrderService;
 import com.sean.custom.spring.dom.BeanDomFactory;
@@ -38,6 +39,12 @@ public class TestBeanFactory {
 	@Test
 	public void testBeanDom4jFactory() {
 		beanFactory = new BeanDom4jFactory();
+		testBeanFactory();
+	}
+	
+	@Test
+	public void testBeanAnnotationFactory() {
+		beanFactory = new Scan();
 		testBeanFactory();
 	}
 	
